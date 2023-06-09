@@ -44,12 +44,12 @@ except URLError as e:
 
 # sl.stop()
 
-my_cnx = snowflake.connector.connect(**sl.secrets["snowflake"])
-my_cur = my_cnx.cursor()
-my_cur.execute("select * from fruit_load_list")
-my_data_rows = my_cur.fetchall()
-sl.header("The fruit load list contains:")
-sl.dataframe(my_data_rows)
+# my_cnx = snowflake.connector.connect(**sl.secrets["snowflake"])
+# my_cur = my_cnx.cursor()
+# my_cur.execute("select * from fruit_load_list")
+# my_data_rows = my_cur.fetchall()
+# sl.header("The fruit load list contains:")
+# sl.dataframe(my_data_rows)
 
 def insert_row_snowflake(new_fruit):
   with my_cnx.cursor() as my_cur:
